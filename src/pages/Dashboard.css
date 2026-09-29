@@ -58,14 +58,17 @@
 
 .dash-dropzone {
   cursor: pointer;
-  padding: 2.5rem 0;
-  border: 2px dashed var(--ink-100);
+  padding: 5.5rem 0;
+  border: 2px dashed #328b87;
   border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .dash-dropzone:hover {
   background: var(--ink-50);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .dash-dropzone--active,
 .dash-dropzone--active:hover {

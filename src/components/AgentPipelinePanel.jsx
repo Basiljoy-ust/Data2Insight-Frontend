@@ -39,38 +39,46 @@ export default function AgentPipelinePanel({ agents, compact = false }) {
         {done}/{agents.length} complete
       </div>
 
-      <div className={`d-flex flex-column gap-1 ${compact ? 'pipeline-panel__list--compact' : ''}`}>
-        {agents.map((agent) => (
-          <div
-            key={agent.id}
-            className={`pipeline-panel__row d-flex align-items-center justify-content-between ${
-              agent.status === 'ACTIVE' ? 'pipeline-panel__row--active' : ''
-            }`}
-          >
-            <div className="pipeline-panel__row-main d-flex align-items-center">
-              <span
-                className={`pipeline-panel__num d-flex align-items-center justify-content-center ${
-                  agent.status === 'ACTIVE'
-                    ? 'pipeline-panel__num--active'
-                    : agent.status === 'DONE'
-                      ? 'pipeline-panel__num--done'
-                      : agent.status === 'SKIPPED'
-                        ? 'pipeline-panel__num--skipped'
-                        : agent.status === 'FAILED'
-                          ? 'pipeline-panel__num--failed'
-                          : 'pipeline-panel__num--default'
+      <div className={`d-flex flex-column gap-2 ${compact ? 'pipeline-panel__list--compact' : ''}`}>
+        {agents.map((agent, index) => {
+          const prevAgent = index > 0 ? agents[index - 1] : null
+          const showPhaseHeader = !prevAgent || prevAgent.phase !== agent.phase
+          
+          return (
+            <div key={agent.id}>
+              {showPhaseHeader && (
+                <div className="pipeline-panel__phase-header">{agent.phase}</div>
+              )}
+              <div
+                className={`pipeline-panel__row d-flex align-items-center justify-content-between ${
+                  agent.status === 'ACTIVE' ? 'pipeline-panel__row--active' : ''
                 }`}
               >
-                {agent.id}
-              </span>
-              <div>
-                <div className="pipeline-panel__name">{agent.name}</div>
-                <div className="pipeline-panel__phase">{agent.phase}</div>
+                <div className="pipeline-panel__row-main d-flex align-items-center">
+                  <span
+                    className={`pipeline-panel__num d-flex align-items-center justify-content-center ${
+                      agent.status === 'ACTIVE'
+                        ? 'pipeline-panel__num--active'
+                        : agent.status === 'DONE'
+                          ? 'pipeline-panel__num--done'
+                          : agent.status === 'SKIPPED'
+                            ? 'pipeline-panel__num--skipped'
+                            : agent.status === 'FAILED'
+                              ? 'pipeline-panel__num--failed'
+                              : 'pipeline-panel__num--default'
+                    }`}
+                  >
+                    {agent.id}
+                  </span>
+                  <div>
+                    <div className="pipeline-panel__name">{agent.name}</div>
+                  </div>
+                </div>
+                <AgentStatusLabel status={agent.status} />
               </div>
             </div>
-            <AgentStatusLabel status={agent.status} />
-          </div>
-        ))}
+          )
+        })}
       </div>
 
       <div className="pipeline-panel__legend d-flex align-items-center mt-3">

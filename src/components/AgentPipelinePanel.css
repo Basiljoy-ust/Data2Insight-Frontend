@@ -40,20 +40,27 @@
 /* Agent list */
 
 .pipeline-panel__list--compact {
-  max-height: 24rem;
+  max-height: 45rem;
   overflow-y: auto;
 }
 
 .pipeline-panel__row {
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 3px solid var(--ink-100);
+  transition: all 0.2s ease;
 }
-.pipeline-panel__row--active {
-  background: var(--brand-50);
+.pipeline-panel__row:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  border-left-color: var(--brand-300);
+  border-left-color: var(--brand-500);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.15);
 }
 
 .pipeline-panel__row-main {
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .pipeline-panel__num {
@@ -89,7 +96,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
-  color: var(--ink-900);
+  color: teal;
 }
 
 .pipeline-panel__phase {
@@ -99,12 +106,37 @@
   color: var(--ink-300);
 }
 
+/* Phase section header */
+
+.pipeline-panel__phase-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-600);
+  padding: 1.25rem 0 0.85rem 0;
+  margin-top: 1.25rem;
+  border-bottom: 2.5px solid var(--brand-500);
+  position: relative;
+}
+.pipeline-panel__phase-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2.5px;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--brand-600);
+  transition: width 0.3s ease;
+}
+
 /* Legend */
 
 .pipeline-panel__legend {
   gap: 1rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--ink-100);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  border-top: 2px solid var(--ink-150);
   font-size: 0.75rem;
   line-height: 1rem;
   color: var(--ink-500);

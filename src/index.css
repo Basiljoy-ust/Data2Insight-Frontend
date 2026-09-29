@@ -97,8 +97,8 @@ body {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 600;
-  color: var(--ink-900);
+  font-weight: 700;
+  color: #17635f;
 }
 
 .hint-text {
@@ -115,6 +115,7 @@ body {
   border: 1px solid var(--ink-100);
   border-radius: 1rem;
   padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .surface-card--flush {
