@@ -1,0 +1,132 @@
+/* Dashboard page */
+
+.dash-main {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.dash-side {
+  width: 24rem;
+  flex-shrink: 0;
+}
+
+.dash-actions {
+  gap: 0.75rem;
+}
+
+/* ---- Stat cards ---- */
+
+.stat-card__head {
+  margin-bottom: 0.75rem;
+}
+
+.stat-card__icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: var(--brand-50);
+  color: var(--brand-700);
+}
+
+.stat-card__value {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.stat-card__sub {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+/* ---- Inline "Open workflow" / "View all" links ---- */
+
+.dash-link {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  color: var(--brand-700);
+}
+.dash-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- Quick upload dropzones ---- */
+
+.dash-dropzone {
+  cursor: pointer;
+  padding: 2.5rem 0;
+  border: 2px dashed var(--ink-100);
+  border-radius: 0.75rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.dash-dropzone:hover {
+  background: var(--ink-50);
+}
+.dash-dropzone--active,
+.dash-dropzone--active:hover {
+  border-color: var(--brand-500);
+  background: var(--brand-50);
+}
+
+.dash-dropzone__icon {
+  color: var(--ink-300);
+}
+
+.dash-dropzone__title {
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+.dash-dropzone__hint {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+/* ---- Recent decks list ---- */
+
+.dash-deck-row {
+  padding: 0.75rem 0;
+}
+
+.dash-deck-row__main,
+.dash-deck-row__actions {
+  gap: 0.75rem;
+}
+
+.dash-deck-row__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background: var(--brand-50);
+  color: var(--brand-700);
+}
+
+.dash-deck-row__name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-900);
+  text-align: left;
+}
+.dash-deck-row__name:hover {
+  text-decoration: underline;
+}
+
+.dash-deck-row__meta {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+.dash-empty {
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--ink-500);
+}

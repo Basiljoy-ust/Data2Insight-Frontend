@@ -1,0 +1,137 @@
+/* Agent pipeline side panel */
+
+.pipeline-panel__meta {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+/* Header chips (Running / Idle / N skipped) */
+
+.badge.pipeline-panel__chip {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+.badge.pipeline-panel__chip--skipped {
+  background: var(--amber-50);
+  color: var(--amber-700);
+}
+.badge.pipeline-panel__chip--running {
+  background: var(--brand-50);
+  color: var(--brand-700);
+}
+.badge.pipeline-panel__chip--idle {
+  background: var(--emerald-50);
+  color: var(--emerald-700);
+}
+
+/* Progress bar (Bootstrap progress with brand colours) */
+
+.progress.pipeline-panel__progress {
+  --bs-progress-height: 0.5rem;
+  --bs-progress-bg: var(--ink-100);
+  --bs-progress-border-radius: 50rem;
+  --bs-progress-bar-bg: var(--brand-500);
+  --bs-progress-bar-transition: width 0.15s ease;
+}
+
+/* Agent list */
+
+.pipeline-panel__list--compact {
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+.pipeline-panel__row {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+.pipeline-panel__row--active {
+  background: var(--brand-50);
+}
+
+.pipeline-panel__row-main {
+  gap: 0.75rem;
+}
+
+.pipeline-panel__num {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+.pipeline-panel__num--active {
+  background: var(--brand-600);
+  color: #fff;
+}
+.pipeline-panel__num--done {
+  background: var(--emerald-100);
+  color: var(--emerald-700);
+}
+.pipeline-panel__num--skipped {
+  background: var(--amber-100);
+  color: var(--amber-700);
+}
+.pipeline-panel__num--failed {
+  background: var(--rose-100);
+  color: var(--rose-700);
+}
+.pipeline-panel__num--default {
+  background: var(--ink-100);
+  color: var(--ink-500);
+}
+
+.pipeline-panel__name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+.pipeline-panel__phase {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: var(--ink-300);
+}
+
+/* Legend */
+
+.pipeline-panel__legend {
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ink-100);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+.pipeline-panel__legend-item {
+  gap: 0.375rem;
+}
+
+.pipeline-panel__legend-dot {
+  display: inline-block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+}
+.pipeline-panel__legend-dot--done {
+  background: var(--emerald-600);
+}
+.pipeline-panel__legend-dot--active {
+  background: var(--brand-600);
+}
+.pipeline-panel__legend-dot--pending {
+  background: var(--amber-600);
+}
+.pipeline-panel__legend-dot--future {
+  background: var(--ink-300);
+}
+.pipeline-panel__legend-dot--skipped {
+  background: var(--amber-600);
+}

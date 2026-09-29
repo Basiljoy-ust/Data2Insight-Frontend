@@ -1,0 +1,234 @@
+/*
+ * Global theme.
+ *
+ * Bootstrap 5 is imported in main.jsx before this file, so every rule here
+ * layers on top of Bootstrap. Page-specific and component-specific rules live
+ * in the .css file next to each .jsx file.
+ */
+
+:root {
+  /* Brand palette */
+  --brand-950: #0b3d3a;
+  --brand-900: #0f4f4a;
+  --brand-800: #12615a;
+  --brand-700: #167268;
+  --brand-600: #1a8377;
+  --brand-500: #22a394;
+  --brand-100: #e3f3f0;
+  --brand-50: #f2f9f8;
+
+  /* Neutral "ink" palette */
+  --ink-900: #14201f;
+  --ink-700: #3f4f4d;
+  --ink-500: #6b7b79;
+  --ink-300: #a6b3b1;
+  --ink-100: #e6eceb;
+  --ink-50: #f6f8f7;
+
+  /* Accent palette used by status pills, notices, and legend dots */
+  --emerald-50: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --sky-50: #f0f9ff;
+  --sky-700: #0369a1;
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --violet-50: #f5f3ff;
+  --violet-700: #6d28d9;
+  --rose-50: #fff1f2;
+  --rose-100: #ffe4e6;
+  --rose-600: #e11d48;
+  --rose-700: #be123c;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Bootstrap token overrides */
+  --bs-body-font-family: var(--font-sans);
+  --bs-body-bg: #f7f8f7;
+  --bs-body-color: var(--ink-900);
+  --bs-border-color: var(--ink-100);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f7f8f7;
+  color: var(--ink-900);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink-300);
+  border-radius: 999px;
+}
+
+/* ---------- Shared typography ---------- */
+
+.eyebrow {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: var(--ink-500);
+}
+
+.page-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.page-subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--ink-500);
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.hint-text {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+/* ---------- Shared surfaces ---------- */
+
+.surface-card {
+  background: #fff;
+  border: 1px solid var(--ink-100);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.surface-card--flush {
+  padding: 0;
+}
+
+.divide-list > * + * {
+  border-top: 1px solid var(--ink-100);
+}
+
+/* ---------- Bootstrap button variants ---------- */
+
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand-700);
+  --bs-btn-border-color: var(--brand-700);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-800);
+  --bs-btn-hover-border-color: var(--brand-800);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--brand-800);
+  --bs-btn-active-border-color: var(--brand-800);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--brand-700);
+  --bs-btn-disabled-border-color: var(--brand-700);
+  --bs-btn-disabled-opacity: 0.5;
+  --bs-btn-focus-shadow-rgb: 34, 163, 148;
+}
+
+.btn-outline-ink {
+  --bs-btn-color: var(--ink-700);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--ink-100);
+  --bs-btn-hover-color: var(--ink-700);
+  --bs-btn-hover-bg: var(--ink-50);
+  --bs-btn-hover-border-color: var(--ink-100);
+  --bs-btn-active-color: var(--ink-700);
+  --bs-btn-active-bg: var(--ink-50);
+  --bs-btn-active-border-color: var(--ink-100);
+  --bs-btn-disabled-color: var(--ink-700);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--ink-100);
+  --bs-btn-focus-shadow-rgb: 166, 179, 177;
+}
+
+.btn-pill {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-font-size: 0.875rem;
+  --bs-btn-font-weight: 500;
+  --bs-btn-line-height: 1.25rem;
+  --bs-btn-border-radius: 50rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Text-only button: strips browser chrome so it reads like inline text */
+.btn-plain {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+/* Small square icon link (download buttons in lists) */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--ink-100);
+  border-radius: 0.5rem;
+  color: var(--ink-500);
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out;
+}
+.icon-btn:hover {
+  background: var(--ink-50);
+  color: var(--ink-500);
+}
+
+/* ---------- Bootstrap alert variants ---------- */
+
+.alert.alert-soft {
+  --bs-alert-padding-x: 1rem;
+  --bs-alert-padding-y: 0.75rem;
+  --bs-alert-margin-bottom: 0;
+  --bs-alert-border: 0;
+  --bs-alert-border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.alert.alert-soft-danger {
+  --bs-alert-bg: var(--rose-50);
+  --bs-alert-color: var(--rose-700);
+}
+.alert.alert-soft-warning {
+  --bs-alert-bg: var(--amber-50);
+  --bs-alert-color: var(--amber-700);
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 1s linear infinite;
+}

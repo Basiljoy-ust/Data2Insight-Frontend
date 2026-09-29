@@ -1,0 +1,120 @@
+/* Agent Pipeline page */
+
+.pipe-main {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.pipe-side {
+  width: 24rem;
+  flex-shrink: 0;
+}
+
+.pipe-month {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+/* ---- Empty / loading states ---- */
+
+.pipe-empty {
+  color: var(--ink-500);
+}
+
+.pipe-empty__title {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+.pipe-empty__text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.pipe-loading {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--ink-500);
+}
+
+/* ---- Metric tiles ---- */
+
+.pipe-metric {
+  padding: 1rem;
+  border: 1px solid var(--ink-100);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.pipe-metric__value {
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+/* ---- Notable changes ---- */
+
+.pipe-stack {
+  gap: 0.75rem;
+}
+
+.pipe-case {
+  padding: 0.75rem;
+  border: 1px solid var(--ink-100);
+  border-radius: 0.5rem;
+}
+
+.pipe-case__title {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+.badge.pipe-case__outcome {
+  padding: 0.125rem 0.5rem;
+  background: var(--rose-50);
+  color: var(--rose-700);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.pipe-case__commentary {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--ink-500);
+}
+
+/* ---- Validation notes ---- */
+
+.pipe-issue {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.pipe-issue--error {
+  background: var(--rose-50);
+  color: var(--rose-700);
+}
+.pipe-issue--warning {
+  background: var(--amber-50);
+  color: var(--amber-700);
+}
+.pipe-issue--info {
+  background: var(--ink-50);
+  color: var(--ink-700);
+}
+
+.pipe-issue__row {
+  font-size: 0.75rem;
+}

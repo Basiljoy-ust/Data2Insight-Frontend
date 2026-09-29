@@ -1,0 +1,80 @@
+/* Status indicators shared by the dashboard, history, and pipeline views */
+
+.status-dot {
+  display: inline-block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* ---- Job status pill (Bootstrap badge with soft colours) ---- */
+
+.badge.job-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.badge.job-pill--ready {
+  background: var(--emerald-50);
+  color: var(--emerald-700);
+}
+.badge.job-pill--reviewed {
+  background: var(--sky-50);
+  color: var(--sky-700);
+}
+.badge.job-pill--delivered {
+  background: var(--amber-50);
+  color: var(--amber-700);
+}
+.badge.job-pill--awaiting-review {
+  background: var(--violet-50);
+  color: var(--violet-700);
+}
+.badge.job-pill--running {
+  background: var(--brand-50);
+  color: var(--brand-700);
+}
+.badge.job-pill--queued {
+  background: var(--ink-100);
+  color: var(--ink-700);
+}
+.badge.job-pill--failed {
+  background: var(--rose-50);
+  color: var(--rose-700);
+}
+
+/* ---- Agent status label (text only, no background) ---- */
+
+.agent-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.agent-label--done {
+  color: var(--emerald-600);
+}
+.agent-label--active {
+  color: var(--brand-600);
+}
+.agent-label--pending {
+  color: var(--amber-600);
+}
+.agent-label--future {
+  color: var(--ink-300);
+}
+.agent-label--failed {
+  color: var(--rose-600);
+}
+.agent-label--skipped {
+  color: var(--amber-600);
+}

@@ -1,0 +1,123 @@
+/* Generate Deck page */
+
+.gen-page {
+  max-width: 48rem;
+}
+
+/* ---- Upload mode toggle ---- */
+
+.gen-toggle {
+  padding: 0.25rem;
+  border: 1px solid var(--ink-100);
+  border-radius: 50rem;
+  background: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.gen-toggle__btn {
+  padding: 0.375rem 1rem;
+  border-radius: 50rem;
+  color: var(--ink-700);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.gen-toggle__btn:hover {
+  background: var(--ink-50);
+}
+.gen-toggle__btn--active,
+.gen-toggle__btn--active:hover {
+  background: var(--brand-700);
+  color: #fff;
+}
+
+/* ---- Selected file card ---- */
+
+.gen-file {
+  padding: 1rem;
+  border: 1px solid var(--ink-100);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.gen-file__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background: var(--brand-50);
+  color: var(--brand-700);
+}
+
+.gen-file__name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+.gen-file__size {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+.gen-file__clear {
+  display: inline-flex;
+  color: var(--ink-300);
+}
+.gen-file__clear:hover {
+  color: var(--ink-700);
+}
+
+/* ---- Empty dropzone ---- */
+
+.gen-dropzone {
+  cursor: pointer;
+  padding: 3rem 0;
+  border: 2px dashed var(--ink-100);
+  border-radius: 0.75rem;
+  background: #fff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.gen-dropzone:hover {
+  background: var(--ink-50);
+}
+.gen-dropzone--active,
+.gen-dropzone--active:hover {
+  border-color: var(--brand-500);
+  background: var(--brand-50);
+}
+
+.gen-dropzone__icon {
+  color: var(--ink-300);
+}
+
+.gen-dropzone__title {
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+.gen-dropzone__hint {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ink-500);
+}
+
+/* ---- Submit button ---- */
+
+.gen-submit {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-size: 0.875rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-line-height: 1.25rem;
+  --bs-btn-border-radius: 0.75rem;
+  --bs-btn-disabled-bg: var(--ink-300);
+  --bs-btn-disabled-border-color: var(--ink-300);
+  --bs-btn-disabled-opacity: 1;
+}
+.gen-submit:disabled {
+  pointer-events: auto;
+  cursor: not-allowed;
+}
